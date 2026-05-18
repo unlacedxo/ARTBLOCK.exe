@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="theme-color"
+    content="#B3988A"
+  />
+
+  <meta
+    name="description"
+    content="Escape creative paralysis with tiny weird art tasks."
+  />
+
+  <title>ARTBLOCK.EXE</title>
+
+  <link
+    rel="manifest"
+    href="./manifest.json"
+  />
+
+  <link
+    rel="apple-touch-icon"
+    href="./icons/icon-192x192.png"
+  />
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="192x192"
+    href="./icons/icon-192x192.png"
+  />
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="512x512"
+    href="./icons/icon-512x512.png"
+  />
+
+  <link
+    rel="stylesheet"
+    href="./style.css"
+  />
+</head>
+
+<body class="theme-dustloom">
+
+  <div class="background-noise"></div>
+
+  <header class="hero">
+
+    <p class="eyebrow">
+      creative paralysis escape machine
+    </p>
+
+    <h1>ARTBLOCK.EXE</h1>
+
+    <p class="tagline">
+      Tiny weird prompts for unsticking your brain.
+    </p>
+
+  </header>
+
+  <main class="app-shell">
+
+    <!-- THEME SECTION -->
+
+    <section class="panel">
+
+      <h2>Choose your atmosphere</h2>
+
+      <p class="section-description">
+        Change the emotional weather of the app.
+      </p>
+
+      <div
+        class="options"
+        id="theme-options"
+      ></div>
+
+    </section>
+
+    <!-- FEELS SECTION -->
+
+    <section class="panel">
+
+      <h2>What feels hard?</h2>
+
+      <p class="section-description">
+        Pick the flavor of artistic suffering.
+      </p>
+
+      <div
+        class="options"
+        id="feels-options"
+      ></div>
+
+    </section>
+
+    <!-- ENERGY SECTION -->
+
+    <section class="panel">
+
+      <h2>Energy level</h2>
+
+      <p class="section-description">
+        Be honest. Goblin honesty.
+      </p>
+
+      <div
+        class="options"
+        id="energy-options"
+      ></div>
+
+    </section>
+
+    <!-- TIME SECTION -->
+
+    <section class="panel">
+
+      <h2>Available time</h2>
+
+      <p class="section-description">
+        Tiny effort still counts.
+      </p>
+
+      <div
+        class="options"
+        id="time-options"
+      ></div>
+
+    </section>
+
+    <!-- GENERATE BUTTON -->
+
+    <button
+      id="generate-btn"
+      class="generate-btn"
+    >
+      UNSTICK ME
+    </button>
+
+    <!-- OUTPUT -->
+
+    <section
+      id="output-section"
+      class="output-section hidden"
+    >
+
+      <p class="output-label">
+        your tiny mission:
+      </p>
+
+      <p id="task-text"></p>
+
+      <button
+        id="another-btn"
+        class="another-btn"
+      >
+        another one
+      </button>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <p>
+      Made for tired artists, haunted sketchbooks,
+      and brains full of static.
+    </p>
+
+  </footer>
+
+  <script src="./app.js"></script>
+
+</body>
+</html>

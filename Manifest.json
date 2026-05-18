@@ -1,0 +1,50 @@
+{
+  "name": "ARTBLOCK.EXE",
+  "short_name": "ARTBLOCK",
+  "description": "Escape creative paralysis with tiny weird art tasks.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F5F1EA",
+  "theme_color": "#B3988A",
+  "categories": [
+    "art",
+    "creativity",
+    "productivity",
+    "lifestyle"
+  ],
+  "lang": "en-US",
+  "dir": "ltr",
+
+  "icons": [
+    {
+      "src": "./icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+
+    {
+      "src": "./icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+
+  "shortcuts": [
+    {
+      "name": "Unstick Me",
+      "short_name": "Prompt",
+      "description": "Generate a weird tiny art task instantly.",
+      "url": "./?action=generate",
+      "icons": [
+        {
+          "src": "./icons/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
