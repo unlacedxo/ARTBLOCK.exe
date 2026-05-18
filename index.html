@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8" />
 
   <meta
@@ -20,11 +21,35 @@
 
   <title>ARTBLOCK.EXE</title>
 
-  <link rel="manifest" href="./manifest.json" />
-  <link rel="apple-touch-icon" href="./icons/icon-192x192.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192x192.png" />
-  <link rel="icon" type="image/png" sizes="512x512" href="./icons/icon-512x512.png" />
-  <link rel="stylesheet" href="./style.css" />
+  <link
+    rel="manifest"
+    href="./manifest.json"
+  />
+
+  <link
+    rel="apple-touch-icon"
+    href="./icons/icon-192x192.png"
+  />
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="192x192"
+    href="./icons/icon-192x192.png"
+  />
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="512x512"
+    href="./icons/icon-512x512.png"
+  />
+
+  <link
+    rel="stylesheet"
+    href="./style.css"
+  />
+
 </head>
 
 <body class="theme-dustloom">
@@ -32,105 +57,212 @@
   <div class="background-noise"></div>
 
   <header class="hero">
-    <p class="eyebrow">creative paralysis escape machine</p>
+
+    <p class="eyebrow">
+      creative paralysis escape machine
+    </p>
+
     <h1>ARTBLOCK.EXE</h1>
-    <p class="tagline">Tiny weird prompts for unsticking your brain.</p>
+
+    <p class="tagline">
+      Tiny weird prompts for unsticking your brain.
+    </p>
+
   </header>
 
   <main class="app-shell">
 
     <section class="panel">
+
       <h2>Choose your atmosphere</h2>
-      <p class="section-description">Change the emotional weather of the app.</p>
-      <div class="options" id="theme-options"></div>
+
+      <p class="section-description">
+        Change the emotional weather of the app.
+      </p>
+
+      <div
+        class="options"
+        id="theme-options"
+      ></div>
+
     </section>
 
     <section class="panel">
+
       <h2>What feels hard?</h2>
-      <p class="section-description">Pick the flavor of artistic suffering.</p>
-      <div class="options" id="feels-options"></div>
+
+      <p class="section-description">
+        Pick the flavor of artistic suffering.
+      </p>
+
+      <div
+        class="options"
+        id="feels-options"
+      ></div>
+
     </section>
 
     <section class="panel">
+
       <h2>Prompt type</h2>
-      <p class="section-description">Choose what kind of thing you want to draw.</p>
-      <div class="options" id="type-options"></div>
+
+      <p class="section-description">
+        Choose what kind of thing you want to draw.
+      </p>
+
+      <div
+        class="options"
+        id="type-options"
+      ></div>
+
     </section>
 
     <section class="panel">
+
       <h2>Difficulty</h2>
-      <p class="section-description">Pick the amount of chaos your hands can survive.</p>
-      <div class="options" id="difficulty-options"></div>
+
+      <p class="section-description">
+        Pick the amount of chaos your hands can survive.
+      </p>
+
+      <div
+        class="options"
+        id="difficulty-options"
+      ></div>
+
     </section>
 
     <section class="panel">
+
       <h2>Drawing goal</h2>
-      <p class="section-description">Decide what this tiny mission is secretly training.</p>
-      <div class="options" id="goal-options"></div>
+
+      <p class="section-description">
+        Decide what this tiny mission secretly trains.
+      </p>
+
+      <div
+        class="options"
+        id="goal-options"
+      ></div>
+
     </section>
 
     <section class="panel">
+
       <h2>Energy level</h2>
-      <p class="section-description">Be honest. Goblin honesty.</p>
-      <div class="options" id="energy-options"></div>
+
+      <p class="section-description">
+        Goblin honesty only.
+      </p>
+
+      <div
+        class="options"
+        id="energy-options"
+      ></div>
+
     </section>
 
     <section class="panel">
+
       <h2>Available time</h2>
-      <p class="section-description">Tiny effort still counts.</p>
-      <div class="options" id="time-options"></div>
+
+      <p class="section-description">
+        Tiny effort still counts.
+      </p>
+
+      <div
+        class="options"
+        id="time-options"
+      ></div>
+
     </section>
 
-    <button id="generate-btn" class="generate-btn">
+    <button
+      id="generate-btn"
+      class="generate-btn"
+    >
       UNSTICK ME
     </button>
 
-    <section id="output-section" class="output-section hidden">
-      <p class="output-label">your tiny mission:</p>
+    <section
+      id="output-section"
+      class="output-section hidden"
+    >
 
-      
-<div class="mission-card">
-  <p class="mission-heading">START</p>
-  <p id="start-text"></p>
+      <p class="output-label">
+        your octillion mission:
+      </p>
 
-  <p class="mission-heading">TWIST</p>
-  <p id="twist-text"></p>
+      <div class="mission-card">
 
-  <p class="mission-heading">LIMIT</p>
-  <p id="limit-text"></p>
+        <div class="mission-block">
+          <p class="mission-heading">START</p>
+          <p id="start-text"></p>
+        </div>
 
-  <p class="mission-heading">FEEL</p>
-  <p id="feel-text"></p>
+        <div class="mission-block">
+          <p class="mission-heading">TWIST</p>
+          <p id="twist-text"></p>
+        </div>
 
-  <p class="mission-heading">WORLD</p>
-  <p id="world-text"></p>
+        <div class="mission-block">
+          <p class="mission-heading">LIMIT</p>
+          <p id="limit-text"></p>
+        </div>
 
-  <p class="mission-heading">REWARD</p>
-  <p id="reward-text"></p>
+        <div class="mission-block">
+          <p class="mission-heading">FEEL</p>
+          <p id="feel-text"></p>
+        </div>
 
-  <p class="mission-heading">REPEAT</p>
-  <p id="repeat-text"></p>
+        <div class="mission-block">
+          <p class="mission-heading">WORLD</p>
+          <p id="world-text"></p>
+        </div>
 
-  <p class="mission-heading">EVOLVE</p>
-  <p id="evolve-text"></p>
+        <div class="mission-block">
+          <p class="mission-heading">REWARD</p>
+          <p id="reward-text"></p>
+        </div>
 
-  <p class="mission-heading">BYTEBLOOM SAYS</p>
-  <p id="bytebloom-text"></p>
-</div>
+        <div class="mission-block">
+          <p class="mission-heading">REPEAT</p>
+          <p id="repeat-text"></p>
+        </div>
 
+        <div class="mission-block">
+          <p class="mission-heading">EVOLVE</p>
+          <p id="evolve-text"></p>
+        </div>
 
-      <button id="another-btn" class="another-btn">
+        <div class="mission-block bytebloom-block">
+          <p class="mission-heading">
+            BYTEBLOOM SAYS
+          </p>
+
+          <p id="bytebloom-text"></p>
+        </div>
+
+      </div>
+
+      <button
+        id="another-btn"
+        class="another-btn"
+      >
         another one
       </button>
+
     </section>
 
   </main>
 
   <footer>
+
     <p>
       Made for tired artists, haunted sketchbooks,
       and brains full of static.
     </p>
+
   </footer>
 
   <script src="./app.js"></script>
