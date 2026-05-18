@@ -1,6 +1,6 @@
 // service-worker.js
 
-const CACHE_NAME = "artblock-exe-v1";
+const CACHE_NAME = "artblock-exe-v99";
 
 const ASSETS = [
   "./",
