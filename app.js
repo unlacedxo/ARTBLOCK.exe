@@ -306,4 +306,3 @@ document.addEventListener("DOMContentLoaded", () => {
     generateTask();
   }
 });
-EOF
