@@ -594,8 +594,14 @@ h2 {
     0 8px 24px var(--shadow);
 }
 
-#rule-text,
-#bonus-text,
+#start-text,
+#twist-text,
+#limit-text,
+#feel-text,
+#world-text,
+#reward-text,
+#repeat-text,
+#evolve-text,
 #bytebloom-text {
 
   margin: 0;

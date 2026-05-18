@@ -305,29 +305,7 @@ function pickRandom(list) {
   return list[Math.floor(Math.random() * list.length)];
 }
 
-function generateTask() {
-  const type = getSelectedValue("type-options", "creature");
-  const difficulty = getSelectedValue("difficulty-options", "easy");
-  const goal = getSelectedValue("goal-options", "weird");
 
-  const task = pickRandom(TASKS[type] || TASKS.creature);
-  const rule = pickRandom(RULES[difficulty] || RULES.easy);
-  const bonus = pickRandom(BONUSES[goal] || BONUSES.weird);
-  const bytebloom = pickRandom(BYTEBLOOM_LINES);
-
-  document.getElementById("task-text").textContent = task;
-  document.getElementById("rule-text").textContent = rule;
-  document.getElementById("bonus-text").textContent = bonus;
-  document.getElementById("bytebloom-text").textContent = bytebloom;
-
-  const outputSection = document.getElementById("output-section");
-  outputSection.classList.remove("hidden");
-
-  outputSection.scrollIntoView({
-    behavior: "smooth",
-    block: "center"
-  });
-}
 
 document.addEventListener("DOMContentLoaded", () => {
   createButtons("theme-options", THEMES, "artblock-theme", "dustloom", setTheme);
@@ -349,3 +327,215 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 });
+
+const STARTS = [
+  "Draw a blob.",
+  "Draw a cup.",
+  "Draw a fruit.",
+  "Draw a rock.",
+  "Draw a tiny house.",
+  "Draw a cloud.",
+  "Draw a box.",
+  "Draw a simple star.",
+  "Draw a sock.",
+  "Draw a spoon."
+];
+
+const TWISTS = [
+  "Make it sleepy.",
+  "Make it confused.",
+  "Make it heroic.",
+  "Make it haunted.",
+  "Make it shy.",
+  "Make it dramatic.",
+  "Make it secretly magical.",
+  "Make it suspicious.",
+  "Make it cozy.",
+  "Make it tiny but powerful."
+];
+
+const LIMITS = {
+  baby: [
+    "Use only one shape.",
+    "Use only 3 lines and 2 dots.",
+    "No erasing.",
+    "Keep it tiny.",
+    "Draw it in under 2 minutes."
+  ],
+
+  easy: [
+    "Use only circles and rectangles.",
+    "Use only 3 colors.",
+    "Add only one detail.",
+    "Make the silhouette clear.",
+    "Use one thick line and one thin line."
+  ],
+
+  medium: [
+    "Use one soft shape and one sharp shape.",
+    "Add one texture.",
+    "Make one part oversized.",
+    "Use contrast: cute plus cursed.",
+    "Add a prop that explains it."
+  ],
+
+  cursed: [
+    "Use no straight lines.",
+    "Draw it with your non-dominant hand first.",
+    "Make it ugly, then add one beautiful detail.",
+    "Make it look found in an abandoned folder.",
+    "Give it one object with a tragic backstory."
+  ]
+};
+
+const FEELS_OUTPUT = [
+  "Make it feel curious.",
+  "Make it feel cozy.",
+  "Make it feel nervous.",
+  "Make it feel proud.",
+  "Make it feel lonely.",
+  "Make it feel excited.",
+  "Make it feel confused.",
+  "Make it feel peaceful.",
+  "Make it feel dramatic.",
+  "Make it feel like it is trying its best."
+];
+
+const WORLDS = [
+  "Place it in a pocket dimension.",
+  "Place it on a tiny floating island.",
+  "Place it inside a jar universe.",
+  "Place it on a messy art desk.",
+  "Place it in a moonlit corner.",
+  "Place it in a cozy cave.",
+  "Place it in a forgotten arcade.",
+  "Place it in a sketchbook forest.",
+  "Place it under a paper moon.",
+  "Place it in a room made of clouds."
+];
+
+const REWARDS = [
+  "Add sparkles.",
+  "Add a tiny friend.",
+  "Add a charm.",
+  "Add a soft glow.",
+  "Add a crown.",
+  "Add a sticker.",
+  "Add a little star.",
+  "Add a ribbon.",
+  "Add a magic crumb.",
+  "Add one thing that makes you smile."
+];
+
+const REPEATS = [
+  "Draw 3 tiny versions.",
+  "Draw it once badly, then once braver.",
+  "Draw a baby version and a dramatic version.",
+  "Draw it from far away and close up.",
+  "Draw it happy, sad, and suspicious.",
+  "Draw it in 30 seconds, then in 3 minutes.",
+  "Draw it with your eyes closed first.",
+  "Draw it as simple as possible twice."
+];
+
+const EVOLVES = [
+  "Turn it into a character.",
+  "Turn it into a sticker.",
+  "Turn it into a mascot.",
+  "Turn it into a tiny logo.",
+  "Turn it into a pattern.",
+  "Turn it into a magical item.",
+  "Turn it into a home screen icon.",
+  "Turn it into a creature family.",
+  "Turn it into a whole little world.",
+  "Turn it into tomorrow’s next drawing."
+];
+
+function generateTask() {
+
+  const difficulty =
+    getSelectedValue(
+      "difficulty-options",
+      "easy"
+    );
+
+  const start =
+    pickRandom(STARTS);
+
+  const twist =
+    pickRandom(TWISTS);
+
+  const limit =
+    pickRandom(
+      LIMITS[difficulty] ||
+      LIMITS.easy
+    );
+
+  const feel =
+    pickRandom(FEELS_OUTPUT);
+
+  const world =
+    pickRandom(WORLDS);
+
+  const reward =
+    pickRandom(REWARDS);
+
+  const repeat =
+    pickRandom(REPEATS);
+
+  const evolve =
+    pickRandom(EVOLVES);
+
+  const bytebloom =
+    pickRandom(BYTEBLOOM_LINES);
+
+  document.getElementById(
+    "start-text"
+  ).textContent = start;
+
+  document.getElementById(
+    "twist-text"
+  ).textContent = twist;
+
+  document.getElementById(
+    "limit-text"
+  ).textContent = limit;
+
+  document.getElementById(
+    "feel-text"
+  ).textContent = feel;
+
+  document.getElementById(
+    "world-text"
+  ).textContent = world;
+
+  document.getElementById(
+    "reward-text"
+  ).textContent = reward;
+
+  document.getElementById(
+    "repeat-text"
+  ).textContent = repeat;
+
+  document.getElementById(
+    "evolve-text"
+  ).textContent = evolve;
+
+  document.getElementById(
+    "bytebloom-text"
+  ).textContent = bytebloom;
+
+  const outputSection =
+    document.getElementById(
+      "output-section"
+    );
+
+  outputSection.classList.remove(
+    "hidden"
+  );
+
+  outputSection.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+}
