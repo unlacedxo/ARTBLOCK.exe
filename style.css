@@ -1,9 +1,11 @@
 /* =========================
    ARTBLOCK.EXE
-   style.css
+   COMPLETE style.css
 ========================= */
 
-/* ========= ROOT ========= */
+/* =========================
+   ROOT VARIABLES
+========================= */
 
 :root {
 
@@ -21,7 +23,7 @@
   --button: #e9e2d5;
   --hover: #d4c0b0;
 
-  --shadow: rgba(52, 38, 28, 0.18);
+  --shadow: rgba(52,38,28,0.18);
 
   --radius: 24px;
 
@@ -48,7 +50,7 @@ body.theme-dustloom {
   --button: #e9e2d5;
   --hover: #d4c0b0;
 
-  --shadow: rgba(52, 38, 28, 0.18);
+  --shadow: rgba(52,38,28,0.18);
 }
 
 /* =========================
@@ -71,7 +73,7 @@ body.theme-cathedral-static {
   --button: #312938;
   --hover: #41324c;
 
-  --shadow: rgba(0, 0, 0, 0.38);
+  --shadow: rgba(0,0,0,0.38);
 }
 
 /* =========================
@@ -171,7 +173,7 @@ body {
 }
 
 /* =========================
-   BACKGROUND GRAIN
+   BACKGROUND NOISE
 ========================= */
 
 .background-noise {
@@ -514,7 +516,7 @@ h2 {
 }
 
 /* =========================
-   OUTPUT
+   OUTPUT SECTION
 ========================= */
 
 .output-section {
@@ -540,6 +542,33 @@ h2 {
   color: var(--muted);
 }
 
+/* =========================
+   MISSION CARD
+========================= */
+
+.mission-card {
+
+  text-align: left;
+
+  margin-top: 16px;
+}
+
+.mission-heading {
+
+  margin:
+    18px 0 6px;
+
+  font-size: 0.72rem;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+
+  color: var(--muted);
+
+  font-weight: 900;
+}
+
 #task-text {
 
   margin:
@@ -563,6 +592,31 @@ h2 {
 
   text-shadow:
     0 8px 24px var(--shadow);
+}
+
+#rule-text,
+#bonus-text,
+#bytebloom-text {
+
+  margin: 0;
+
+  font-size:
+    clamp(
+      1rem,
+      3.6vw,
+      1.35rem
+    );
+
+  line-height: 1.4;
+
+  color: var(--text);
+}
+
+#bytebloom-text {
+
+  color: var(--accent);
+
+  font-weight: 800;
 }
 
 /* =========================
@@ -613,5 +667,15 @@ footer {
   .another-btn {
 
     padding: 16px;
+  }
+
+  #task-text {
+
+    font-size:
+      clamp(
+        1.6rem,
+        9vw,
+        2.8rem
+      );
   }
 }

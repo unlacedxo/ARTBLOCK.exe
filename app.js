@@ -1,95 +1,189 @@
 const TASKS = {
-  overwhelmed: [
-    "Draw 3 haunted spoons with personalities.",
-    "Draw a creature made of blankets.",
-    "Invent a sleepy artifact.",
-    "Draw the world’s saddest lamp.",
-    "Draw one tiny object that survived a dramatic storm.",
-    "Draw a machine trying not to cry."
+  creature: [
+    "Draw a blanket goblin that collects tiny fears.",
+    "Draw a moth-dragon with paintbrush antennae.",
+    "Draw a shy monster made of crumpled paper.",
+    "Draw a sleepy swamp creature wearing a crown.",
+    "Draw a nervous toaster gremlin.",
+    "Draw a tiny ghost hiding inside a hoodie."
   ],
 
-  perfectionism: [
-    "Make the ugliest fish possible.",
-    "Draw a chair badly on purpose.",
-    "Design a monster using only circles.",
-    "Draw with your non-dominant hand for 90 seconds.",
-    "Draw something crooked and refuse to fix it.",
-    "Draw an intentionally terrible self portrait."
-  ],
-
-  noideas: [
+  object: [
     "Draw a criminal teapot.",
-    "Invent a haunted fruit.",
+    "Draw the world’s saddest lamp.",
+    "Draw a chair that lies.",
+    "Draw a haunted spoon with social anxiety.",
+    "Draw a mirror that refuses to reflect correctly.",
+    "Draw an illegal household appliance."
+  ],
+
+  character: [
     "Draw the worst wizard alive.",
-    "Draw a nervous toaster wearing church shoes.",
-    "Invent forbidden art supplies.",
-    "Draw a raccoon knight with emotional problems."
+    "Draw a saint of unfinished projects.",
+    "Draw a tired villain who just wants snacks.",
+    "Draw a knight made of sticky notes.",
+    "Draw a librarian from a haunted arcade.",
+    "Draw a tiny hero with one dramatic problem."
   ],
 
-  fear: [
-    "Design a saint of unfinished projects.",
-    "Draw a machine that mourns.",
-    "Draw a monster that looks unfinished on purpose.",
-    "Make one terrible doodle and give it a noble title.",
-    "Draw something embarrassing with confidence."
-  ],
-
-  overthinking: [
-    "You may only use circles.",
-    "Draw without lifting your pencil.",
-    "Everything must lean left.",
-    "Draw something in one continuous line without planning.",
-    "Draw a dream trying to escape.",
-    "Draw with your eyes closed for 30 seconds first."
-  ],
-
-  tired: [
-    "Draw a sleepy rectangle.",
-    "Draw something half-remembered.",
-    "Invent a weather emotion.",
-    "Draw a napping star.",
-    "Draw a creature too tired to haunt properly.",
-    "Draw a candle emotionally giving up."
-  ],
-
-  burnout: [
-    "Draw the feeling of forgetting something important.",
-    "Design a creature powered by avoidance.",
+  texture: [
+    "Draw rust like it is alive.",
+    "Draw glass that looks emotionally exhausted.",
     "Draw a soft metal.",
-    "Draw rust like it’s alive.",
-    "Make glass look emotionally exhausted.",
-    "Draw a ghost hiding inside a hoodie."
+    "Draw fog made of pencil dust.",
+    "Draw velvet pretending to be stone.",
+    "Draw paper that survived a thunderstorm."
   ],
 
-  toomany: [
-    "Combine two random objects into one tiny creature.",
-    "Pick the first thing you see and make it suspicious.",
-    "Draw a collage monster with three textures.",
-    "Draw one idea badly instead of thinking about twelve perfectly.",
-    "Invent an illegal household appliance."
+  environment: [
+    "Draw a tiny room where ideas go to nap.",
+    "Draw a swamp library at midnight.",
+    "Draw a cozy cave for abandoned sketches.",
+    "Draw an art desk after a magical disaster.",
+    "Draw a cloud city made of erasers.",
+    "Draw a moonlit alley for lost pencils."
+  ],
+
+  symbol: [
+    "Draw a broken halo with tape on it.",
+    "Draw a star that forgot how to shine.",
+    "Draw a sigil for starting badly.",
+    "Draw a tiny crown for an ugly doodle.",
+    "Draw a symbol that means ‘try anyway.’",
+    "Draw a sacred stamp for messy art."
+  ],
+
+  lettering: [
+    "Draw the word STATIC like it is melting.",
+    "Draw the word BLOOM like it is growing teeth.",
+    "Draw the word NOPE as a fancy logo.",
+    "Draw the word DUST in soft haunted letters.",
+    "Draw the word CHAOS with one elegant detail.",
+    "Draw the word START as if it is nervous."
+  ],
+
+  palette: [
+    "Make a color palette for a sleepy thunderstorm.",
+    "Make a color palette for haunted cotton candy.",
+    "Make a color palette for moonlit clay.",
+    "Make a color palette for a broken arcade angel.",
+    "Make a color palette for soft apocalypse.",
+    "Make a color palette for cathedral dust."
+  ],
+
+  chaos: [
+    "Draw a cowboy lasagna dragon.",
+    "Draw a haunted fruit with legal problems.",
+    "Draw a wizard made of soup.",
+    "Draw a fish that owns a suspicious business.",
+    "Draw a teacup committing tax fraud.",
+    "Draw a tiny monster allergic to drama."
   ]
 };
 
+const RULES = {
+  baby: [
+    "Use only one simple shape.",
+    "Use only 3 lines and 2 dots.",
+    "Draw it in under 2 minutes.",
+    "No erasing allowed.",
+    "Make it tiny enough to fit in a corner."
+  ],
+
+  easy: [
+    "Use only circles and rectangles.",
+    "Add one weird detail.",
+    "Use only 3 colors.",
+    "Make the silhouette readable.",
+    "Give it one clear emotion."
+  ],
+
+  medium: [
+    "Combine one soft shape and one sharp shape.",
+    "Add a texture pattern somewhere.",
+    "Give it a prop that explains its personality.",
+    "Use contrast: cute plus cursed.",
+    "Make one part oversized."
+  ],
+
+  cursed: [
+    "Draw it with your non-dominant hand first.",
+    "Make it intentionally ugly, then add one beautiful detail.",
+    "Use no straight lines.",
+    "Give it a tragic backstory through one object.",
+    "Make it look like it was found in an abandoned folder."
+  ]
+};
+
+const BONUSES = {
+  warmup: [
+    "Do three tiny versions before choosing one.",
+    "Shake out your hand and make the first line messy on purpose.",
+    "Draw it once badly, then once slightly better.",
+    "Use this as a warm-up, not a masterpiece."
+  ],
+
+  shapes: [
+    "Break it into circles, squares, triangles, and blobs.",
+    "Draw the silhouette first.",
+    "Make the big shapes clear before details.",
+    "Use one chunky shape and one skinny shape."
+  ],
+
+  confidence: [
+    "Give the drawing a title like it belongs in a museum.",
+    "Circle the part you like most when finished.",
+    "Do not apologize to the paper.",
+    "Let one mistake become a feature."
+  ],
+
+  loosen: [
+    "Keep your lines loose and imperfect.",
+    "Draw fast enough that perfection cannot catch you.",
+    "Leave one edge unfinished.",
+    "Use scribbles as texture."
+  ],
+
+  weird: [
+    "Add one object that makes no sense.",
+    "Make it 20% more dramatic.",
+    "Add a tiny emotional problem.",
+    "Give it a secret job."
+  ],
+
+  texture: [
+    "Add dots, scratches, cracks, grain, or smudges.",
+    "Make one surface feel touchable.",
+    "Use pressure changes to create texture.",
+    "Add one area of roughness and one area of softness."
+  ],
+
+  character: [
+    "Give it a pose that reveals its mood.",
+    "Add eyebrows. They carry the drama.",
+    "Give it one accessory that tells a story.",
+    "Make the eyes do most of the acting."
+  ]
+};
+
+const BYTEBLOOM_LINES = [
+  "Bad art is just art wearing pajamas.",
+  "Tiny ugly art still counts.",
+  "Perfectionism detected. Deploying suspicious spoon.",
+  "Your brain is fog soup. We proceed anyway.",
+  "Make it messy. The paper can handle it.",
+  "You do not need permission to draw.",
+  "Even haunted sketches deserve love.",
+  "A tiny start is still a spell.",
+  "The first version is allowed to be weird.",
+  "Draw it badly. That is the door."
+];
+
 const THEMES = [
-  {
-    key: "dustloom",
-    label: "Dustloom"
-  },
-
-  {
-    key: "cathedral-static",
-    label: "Cathedral Static"
-  },
-
-  {
-    key: "fograndom",
-    label: "FogRandom"
-  },
-
-  {
-    key: "chaos-dust",
-    label: "Chaos Dust"
-  }
+  ["dustloom", "Dustloom"],
+  ["cathedral-static", "Cathedral Static"],
+  ["fograndom", "FogRandom"],
+  ["chaos-dust", "Chaos Dust"]
 ];
 
 const FEELS = [
@@ -101,6 +195,35 @@ const FEELS = [
   ["tired", "tired"],
   ["burnout", "burnout"],
   ["toomany", "too many ideas"]
+];
+
+const TYPES = [
+  ["creature", "creature"],
+  ["object", "object"],
+  ["character", "character"],
+  ["texture", "texture"],
+  ["environment", "environment"],
+  ["symbol", "symbol"],
+  ["lettering", "lettering"],
+  ["palette", "color palette"],
+  ["chaos", "chaos challenge"]
+];
+
+const DIFFICULTY = [
+  ["baby", "baby step"],
+  ["easy", "easy"],
+  ["medium", "medium"],
+  ["cursed", "cursed"]
+];
+
+const GOALS = [
+  ["warmup", "warm up"],
+  ["shapes", "practice shapes"],
+  ["confidence", "build confidence"],
+  ["loosen", "loosen up"],
+  ["weird", "make something weird"],
+  ["texture", "learn texture"],
+  ["character", "create a character"]
 ];
 
 const ENERGY = [
@@ -121,15 +244,15 @@ const TIME = [
 
 function createButtons(containerId, items, storageKey, defaultValue, callback) {
   const container = document.getElementById(containerId);
-
   const saved = localStorage.getItem(storageKey) || defaultValue;
+
+  container.innerHTML = "";
 
   items.forEach(item => {
     const value = Array.isArray(item) ? item[0] : item.key;
     const label = Array.isArray(item) ? item[1] : item.label;
 
     const button = document.createElement("button");
-
     button.type = "button";
     button.textContent = label;
     button.dataset.value = value;
@@ -144,7 +267,6 @@ function createButtons(containerId, items, storageKey, defaultValue, callback) {
       });
 
       button.classList.add("selected");
-
       localStorage.setItem(storageKey, value);
 
       if (callback) {
@@ -175,32 +297,30 @@ function setTheme(themeKey) {
 }
 
 function getSelectedValue(containerId, fallback) {
-  const selected = document.querySelector(
-    `#${containerId} button.selected`
-  );
-
+  const selected = document.querySelector(`#${containerId} button.selected`);
   return selected ? selected.dataset.value : fallback;
 }
 
+function pickRandom(list) {
+  return list[Math.floor(Math.random() * list.length)];
+}
+
 function generateTask() {
-  const feel = getSelectedValue(
-    "feels-options",
-    "overwhelmed"
-  );
+  const type = getSelectedValue("type-options", "creature");
+  const difficulty = getSelectedValue("difficulty-options", "easy");
+  const goal = getSelectedValue("goal-options", "weird");
 
-  const pool = TASKS[feel] || TASKS.overwhelmed;
+  const task = pickRandom(TASKS[type] || TASKS.creature);
+  const rule = pickRandom(RULES[difficulty] || RULES.easy);
+  const bonus = pickRandom(BONUSES[goal] || BONUSES.weird);
+  const bytebloom = pickRandom(BYTEBLOOM_LINES);
 
-  const task =
-    pool[Math.floor(Math.random() * pool.length)];
+  document.getElementById("task-text").textContent = task;
+  document.getElementById("rule-text").textContent = rule;
+  document.getElementById("bonus-text").textContent = bonus;
+  document.getElementById("bytebloom-text").textContent = bytebloom;
 
-  const outputSection =
-    document.getElementById("output-section");
-
-  const taskText =
-    document.getElementById("task-text");
-
-  taskText.textContent = task;
-
+  const outputSection = document.getElementById("output-section");
   outputSection.classList.remove("hidden");
 
   outputSection.scrollIntoView({
@@ -210,59 +330,22 @@ function generateTask() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  createButtons(
-    "theme-options",
-    THEMES,
-    "artblock-theme",
-    "dustloom",
-    setTheme
-  );
+  createButtons("theme-options", THEMES, "artblock-theme", "dustloom", setTheme);
+  createButtons("feels-options", FEELS, "artblock-feel", "overwhelmed");
+  createButtons("type-options", TYPES, "artblock-type", "creature");
+  createButtons("difficulty-options", DIFFICULTY, "artblock-difficulty", "easy");
+  createButtons("goal-options", GOALS, "artblock-goal", "weird");
+  createButtons("energy-options", ENERGY, "artblock-energy", "foggy");
+  createButtons("time-options", TIME, "artblock-time", "5");
 
-  createButtons(
-    "feels-options",
-    FEELS,
-    "artblock-feel",
-    "overwhelmed"
-  );
-
-  createButtons(
-    "energy-options",
-    ENERGY,
-    "artblock-energy",
-    "foggy"
-  );
-
-  createButtons(
-    "time-options",
-    TIME,
-    "artblock-time",
-    "5"
-  );
-
-  const generateButton =
-    document.getElementById("generate-btn");
-
-  const anotherButton =
-    document.getElementById("another-btn");
-
-  generateButton.addEventListener(
-    "click",
-    generateTask
-  );
-
-  anotherButton.addEventListener(
-    "click",
-    generateTask
-  );
+  document.getElementById("generate-btn").addEventListener("click", generateTask);
+  document.getElementById("another-btn").addEventListener("click", generateTask);
 
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker
       .register("./service-worker.js")
       .catch(error => {
-        console.error(
-          "Service worker registration failed:",
-          error
-        );
+        console.error("Service worker registration failed:", error);
       });
   }
 });
