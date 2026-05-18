@@ -1,4 +1,3 @@
-cat > app.js <<'EOF'
 const THEMES = [
   ["dustloom", "Dustloom"],
   ["cathedral-static", "Cathedral Static"],
@@ -265,4 +264,3 @@ document.addEventListener("DOMContentLoaded", () => {
       generateTask
     );
 });
-EOF
